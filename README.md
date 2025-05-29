@@ -614,6 +614,8 @@
 
 9. 작업화면
 
+    https://github.com/user-attachments/assets/46597ff0-b10e-45e2-b005-de3edb676ab4
+
 ## 6일차
 
 ### ASP.NET Core
