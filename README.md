@@ -815,6 +815,7 @@
 
 #### ASP.NET Core MVC - Kelly Portfolio 클로닝 (계속)
 1. 뉴스페이징 완료
+2. 검색
 2. 게시판 완료
 3. 정적페이지 DB연동
 4. 한글화
