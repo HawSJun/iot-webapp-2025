@@ -928,9 +928,42 @@
     - HomeController Contact() Post 메서드 신규 추가
     - 메일관련 작업 - Pendding
 
-### ASP.NET Core API서버
+
+## 11일차
+
+### ASP.NET Core API서버(Web API)
+- 2000년도 초반, 웹서비스 이름의 변형
+- 웹을 통해서 데이터 전달이 목적
+- API서버, WebAPI, RESTful Service, OpenAPI(공용)...
+- 초기에는 XML을 데이터 전달로 사용
+- XML의 방대한 데이터 크기 때문에 현재는 JSON으로 거의 이전(XML의 1/3 수준)
+- WebAPI 서버 사용처
+    - 하나의 서비스로 여러가지 앱에서 같이 사용할때
+    - 회사 ERP를 웹사이트, 모바일, PC앱으로 동시에 사용할때
+    - 알라딘 웹사이트, 모바일, PC 책뷰어...
+
+#### Web API 만들기
+1. ASP .NET Core 웹 API로 프로젝트 생성
+2. Swagger 화면 확인
+3. Program.cs 소스 분석
+4. WeatherForecast 모델 클래스 확인
+5. WeatherForecastController 클래스 확인
+
+#### 웹서비스를 테스트 툴
+1. 웹브라우저 -> URL을 입력, json 뷰어 확인
+2. Swagger UI - Visual Studio에 포함
+3. [Postman](https://www.postman.com/) - 가장 기능이 다양
+
+#### 웹서비스 4가지 메서드
+- 일반 웹사이트에서의 GET/POST는 동일
+- `GET` - 리소스(데이터) 조회
+- `POST` - 요청 데이터 처리(저장, 수정, 삭제), 주로 등록에 사용
+- `PUT` - 리소스 대체, 주로 수정에 사용
+- `DELELTE` - 리소스 삭제, 주로 삭제에 사용
+- PATCH - 리소스 부분 변경(수정). 거의 사용 안함. PATCH 메서드를 지원하지 않으면 PUT으로 대체
 
 ### AWS 클라우드 업로드
+
 
 
 
