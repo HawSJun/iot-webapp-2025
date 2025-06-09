@@ -20,18 +20,18 @@ namespace WebApiApp02.Controllers
             _context = context;
         }
 
-        // GET: api/Books
+        // GET: api/Book
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBooks()
+        public async Task<ActionResult<IEnumerable<Book>>> GetBook()
         {
-            return await _context.Books.ToListAsync();
+            return await _context.Book.ToListAsync();
         }
 
-        // GET: api/Books/5
+        // GET: api/Book/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetBook(int id)
         {
-            var book = await _context.Books.FindAsync(id);
+            var book = await _context.Book.FindAsync(id);
 
             if (book == null)
             {
@@ -41,12 +41,12 @@ namespace WebApiApp02.Controllers
             return book;
         }
 
-        // PUT: api/Books/5
+        // PUT: api/Book/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBook(int id, Book book)
         {
-            if (id != book.Id)
+            if (id != book.Idx)
             {
                 return BadRequest();
             }
@@ -72,28 +72,28 @@ namespace WebApiApp02.Controllers
             return NoContent();
         }
 
-        // POST: api/Books
+        // POST: api/Book
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
         {
-            _context.Books.Add(book);
+            _context.Book.Add(book);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBook", new { id = book.Id }, book);
+            return CreatedAtAction("GetBook", new { id = book.Idx }, book);
         }
 
-        // DELETE: api/Books/5
+        // DELETE: api/Book/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int id)
         {
-            var book = await _context.Books.FindAsync(id);
+            var book = await _context.Book.FindAsync(id);
             if (book == null)
             {
                 return NotFound();
             }
 
-            _context.Books.Remove(book);
+            _context.Book.Remove(book);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace WebApiApp02.Controllers
 
         private bool BookExists(int id)
         {
-            return _context.Books.Any(e => e.Id == id);
+            return _context.Book.Any(e => e.Idx == id);
         }
     }
 }

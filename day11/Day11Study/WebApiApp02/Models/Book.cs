@@ -6,7 +6,7 @@ namespace WebApiApp02.Models
     {
         // Key
         [Key]
-        public int Id { get; set; }
+        public int Idx { get; set; }
 
         // 책제목
         [Required]
