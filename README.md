@@ -954,6 +954,8 @@
 2. Swagger UI - Visual Studio에 포함
 3. [Postman](https://www.postman.com/) - 가장 기능이 다양
 
+    <img src="./image/web0029.png" width="600">
+
 #### 웹서비스 4가지 메서드
 - 일반 웹사이트에서의 GET/POST는 동일
 - `GET` - 리소스(데이터) 조회
@@ -962,62 +964,59 @@
 - `DELELTE` - 리소스 삭제, 주로 삭제에 사용
 - PATCH - 리소스 부분 변경(수정). 거의 사용 안함. PATCH 메서드를 지원하지 않으면 PUT으로 대체
 
+#### WebAPI CRUD 작업연습
+|API|설명|Request body|Response body|
+|:--|:--|:--|:--|
+|GET ~/api/books|모든 책정보 가져오기|None|책정보 배열|
+|GET ~/api/books/{id}|특정 책정보 가져오기|None|책정보 한 건|
+|POST ~/api/books|새 책 추가|Book 데이터|Book 데이터|
+|PUT ~api/books/{id}|기존책 수정|Book|None|
+|DELETE ~/api/books{id}|기존책 삭제|None|None|
+
+<img src="./image/web0026.png" width="600">
+
+1. WebAPI 프로젝트 생성
+2. Models.Book 모델 클래스 생성
+3. EntityFrameWork NuGet 패키지 설치
+    - Microsoft.EntityFrameWorkCore.MySql
+    - Pomelo.EntityFrameworkCore.MySql
+4. appsettings.json DB연결 문자열 추가
+5. MySQL Book 테이블 생성
+6. Models.AppDbContext 초기화 추가
+7. Program.cs AppDbContext 초기화 추가
+8. 스캐폴딩으로 Controller 생성
+    - API > EntityFramework 사용 동작이 포함된 API 컨트롤러 선택
+
+    <img src="./image/web0027.png" width="600">
+
+9. 서버 실행
+
+    <img src="./image/web0028.png" width="600">
+
+#### OpenAPI 형식 WebAPI 연습
+1. IoT 센서데이터를 웹API 서비스
+2. Python에서 더미데이터 100만건 생성
+3. WebAPI 프로젝트 생성
+4. EntityFramework NuGet 패키지 설치
+5. appsettings.json DB연결 문자열 추가
+6. MySQL iot_datas 테이블 생성
+7. Models.iot_datas 클래스 생성
+8. Models.AppDbContext 클래스 생성
+9. Program.cs AppDbContext 초기화 추가
+10. 스캐폴딩으로 Controller 생성
+    - Get 메서드 외 모두 삭제
+11. Get 메서드 파라미터 추가, 쿼리 실행 로직 추가
+12. Swagger UI에서 테스트
+
+    <img src="./image/web0030.png" width="600">
+
+13. 웹브라우저 실행 확인
+
+    <img src="./image/web0031.png" width="600">
+
+## 12일차
+
+### ASP.NET Core API서버(계속)
+
+#### WebAPI 서버 +    
 ### AWS 클라우드 업로드
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### ASP.NET Core MVC - Kelly Portfolio 디자인 클로닝(계속)
-1. _Layout

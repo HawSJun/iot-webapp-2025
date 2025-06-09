@@ -18,7 +18,7 @@ namespace WebApiApp02.Models
 
         // 출판일
         [Required]
-        public DateOnly ReleseDate { get; set; }
+        public DateOnly ReleaseDate { get; set; }
 
 
     }
