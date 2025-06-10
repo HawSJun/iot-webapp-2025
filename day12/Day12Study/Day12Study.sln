@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiApp01", "WebApiApp01\WebApiApp01.csproj", "{508A3EDE-F70D-4301-8B2F-27B397C4C8BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTodoListApp", "WpfTodoListApp\WpfTodoListApp.csproj", "{32B36F31-3393-4331-B7F2-63EA0DD1EA6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{508A3EDE-F70D-4301-8B2F-27B397C4C8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508A3EDE-F70D-4301-8B2F-27B397C4C8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508A3EDE-F70D-4301-8B2F-27B397C4C8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508A3EDE-F70D-4301-8B2F-27B397C4C8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B36F31-3393-4331-B7F2-63EA0DD1EA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B36F31-3393-4331-B7F2-63EA0DD1EA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B36F31-3393-4331-B7F2-63EA0DD1EA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B36F31-3393-4331-B7F2-63EA0DD1EA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2F83B61-1B6F-404C-89D9-233D295D3397}
+	EndGlobalSection
+EndGlobal
