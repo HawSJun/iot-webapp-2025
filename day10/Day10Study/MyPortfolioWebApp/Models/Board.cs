@@ -10,15 +10,15 @@ public partial class Board
     public int Id { get; set; }
 
     [Required]
-    public string Email { get; set; }
+    public string Email { get; set; } = null!;
 
     public string? Writer { get; set; }
 
     [Required]
-    public string Title { get; set; }
-
+    public string Title { get; set; } = null!;
+    
     [Required]
-    public string Contents { get; set; }
+    public string Contents { get; set; } = null!;
 
     public DateTime? PostDate { get; set; }
 

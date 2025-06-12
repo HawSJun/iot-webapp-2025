@@ -19,22 +19,25 @@ namespace MyPortfolioWebApp
             ));
 
             // ASP.NET Core Identity 설정
-            // 원본은 IdentityUser - > CustomUser로 변경
+            // 원본은 IdentityUser -> CustomUser로 변경
             builder.Services.AddIdentity<CustomUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             // 패스워드 정책
-            // 변경 전. 최대 6자리 이상, 특수문자 1개 포함, 영어 대소문자 포함
+            // 변경 전. 최대 6자리 이상, 특수문자 1개 포함, 영어대소문자 포함
+
+            // 변경 후. 최대 4자리 이상, 숫자 포함, 특수문자 제외
             builder.Services.Configure<IdentityOptions>(options =>
             {
-                // 이런 암화 간단화는 되도록 하지말 것
-                options.Password.RequiredLength = 4;    // 최소길이 4자리
-                options.Password.RequireNonAlphanumeric = false; // 특수문자 사용안함
-                options.Password.RequireUppercase = false; // 대문자 사용안함
-                options.Password.RequireLowercase = false; // 소문자 사용안함
-                options.Password.RequireDigit = false; //  숫자 필수 여부
+                // 패스워드 정책 설정 Require(필수)
+                options.Password.RequireDigit = true; // 숫자 포함 
+                options.Password.RequireLowercase = false; // 소문자 포함
+                options.Password.RequireUppercase = false; // 대문자 포함
+                options.Password.RequiredLength = 4; // 최소 길이 4
+                options.Password.RequireNonAlphanumeric = false; // 특수문자 포함 여부
             });
+
 
             var app = builder.Build();
 

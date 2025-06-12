@@ -1424,16 +1424,16 @@ section,
     background-color: #33AE9F;
     color: white;
     border-style: none;
+
 }
 
-/* 로그아웃 버튼 스타일 변경 */
+/* 로그아웃 폼 스타일변경 & 로그아웃 버튼 */
 .link-kelly {
     background: none;
     border: none;
     padding: 0;
     margin: 0;
 }
-
     .link-kelly:hover {
         color: #34B5A5;
     }
