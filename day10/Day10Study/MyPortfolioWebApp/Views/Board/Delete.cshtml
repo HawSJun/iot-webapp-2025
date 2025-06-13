@@ -4,15 +4,18 @@
     ViewData["Title"] = "게시글 삭제";
 }
 
-<section class="container mt-5 d-flex justify-content-center">
-    <div class="border bg-white shadow-sm p-4" style="max-width: 700px; width: 100%;">
-        <h4 class="fw-bold text-center text-dark">
-            이 게시글을 삭제하시겠습니까?
-        </h4>
-        <p class="text-muted text-center mb-4">
-            삭제 전에 내용을 꼭 확인해주세요.
-        </p>
 
+<section class="container mt-5">
+
+    <h2 class="fw-bold text-dark text-center mb-4">
+        게시글 삭제
+    </h2>
+
+    <div class="d-flex justify-content-center">
+        <div class="border bg-white shadow-sm p-4" style="max-width: 700px; width: 100%;">
+            <h4 class="fw-bold text-center text-dark">
+                이 게시글을 삭제하시겠습니까?
+            </h4>
 
         <dl class="row">
             <dt class="col-sm-4 text-end fw-semibold">이메일</dt>
@@ -37,7 +40,8 @@
         <form asp-action="Delete" class="mt-4 d-flex justify-content-center gap-2">
             <input type="hidden" asp-for="Id" />
             <button type="submit" class="btn btn-outline-danger fw-bold">삭제하기</button>
-            <a asp-action="Index" class="btn btn-outline-secondary">목록으로</a>
+            <a asp-action="Index" class="btn btn-outline-secondary">목록</a>
         </form>
+        </div>
     </div>
 </section>
